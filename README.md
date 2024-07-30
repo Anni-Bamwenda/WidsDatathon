@@ -44,9 +44,20 @@ We plot the features to better understand the provided dataset.
 
 Here are some of the _plots_:
 
+![Images/No. of patients by race img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/No.%20of%20patients%20by%20race%20img.png)
+
+
+![Images/Patient Age Distribution img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/Patient%20Age%20distribution%20img.png)
+
+
 
 ### More exploratory analysis
 We then dig deeper to explore some information and relationships present in the data. For example, we use matlotlib to plot the number of patients by race that received diagnosis in zero days, the mean diagnosis period for each race, and correlations between features. See the plots below for _visualizations_:
+
+![No. of patients with 0days diagnosis period img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/No.%20of%20patients%20with%200days%20diagnosis%20period%20img.png)
+
+
+![Images/Types of payment by patient race img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/Types%20of%20payment%20by%20patient%20race%20img.png)
 
 ### Data Preprocessing
 We will do some preprocessing to improve the quality and interpretability of our data. Here are the steps we'll follow:
@@ -100,8 +111,12 @@ Here's a systematic approach to setting up a grid for alpha:
 
 Here are the top 20 features identified through lasso _regularization_:
 
+![Images/Top 20 Features by coeff. value img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/Top%2020%20Features%20by%20coeff.%20value%20img.png)
+
 ### Model Training
 We'll be using random forest to train our model so that it can capture non linear relationships. We'll also do another fit using ridge regression since sometimes trees can lead to overfitting.
+
+![Images/Model training scores img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/Model%20training%20scores%20img.png)
 
 From the output above we see that r2 score for random forest is higher than ridge regression.
 Meaning, the forest model has a higher percentage of explaining variance in our independent/outcome variable.
@@ -114,8 +129,11 @@ Given the 2 comparisons,we'll be picking random forest as our final model. We st
 ### Model Evaluation and Submission
 After seeing how the model works on our train data, we'll use it to predict on the test data and submit results to Kaggle(or save them if you'd like) using 'to_csv' function. Here's is a sample of the predictins made by the model:
 
+![Images/Sample Predictions img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/Sample%20Predictions%20img.png)
 
-We see a surge of frequency at the around the 50 mark. It seems that it takes under 100 days for most of the diagnoses.
+![Images/Predictions histogram img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/Predictions%20histogram%20img.png)
+We see a surge of frequency at the around the 50th mark. It seems that it takes under 100 days for most of the diagnoses. It could also indicate some sort of errors made in training.
+
 
 ### Notes
 Next steps to consider:
