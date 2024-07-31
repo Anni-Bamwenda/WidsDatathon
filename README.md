@@ -19,16 +19,16 @@ Metastatic TNBC is considered the most aggressive TNBC and requires urgent and t
 The primary **goal** of building this model is to detect relationships between demographics of the patient with the likelihood of getting timely treatment. The secondary goal is to see if climate patterns impact proper diagnosis and treatment.
 Throughout the project we will:
 - Explore our dataset and establish relationships through analysis and visualization
-- Clean out the dataset provided by dealing with missing values and outliers
-- Perform feature engineering to ensure our data is ready to for machine learning modeling
+- Clean out the provided dataset by handling missing values and outliers
+- Perform feature engineering to ensure our data is ready for machine learning modeling
 - Perform feature selection to select top 20 features and reduce our dataset size
-- train our model and predict the duration of time it takes patients tor eceive diagnosis
+- train our model and predict the duration of time it takes patients to receive diagnosis
 - Submit our results and note future improvements
 
 ### Software and Libraries
 This project was developed on Kaggle notebooks using the following tools:
 - python
-- NumPy
+- numpy
 - pandas
 - seaborn
 - matplotlib
@@ -61,7 +61,7 @@ We then dig deeper to explore some information and relationships present in the 
 
 ### Data Preprocessing
 We will do some preprocessing to improve the quality and interpretability of our data. Here are the steps we'll follow:
-- Dropping irrelevant features. There are a few features that are irrelevant to the goal of the project. For instance 'patient_gender' is irrelevant because the cancer diagnosis we are dealing with is speicifically done on women. Other irrelevant features are: 'breast_cancer_diagnosis_desc', 'patient_id', 'metastatic_first_novel_treatment' and 'metastatic_first_novel_treatment_type'
+- Dropping irrelevant features. There are a few features that are irrelevant to the goal of the project. For instance 'patient_gender' is irrelevant because the cancer diagnosis we are dealing with is specifically done on women. Other irrelevant features are: 'breast_cancer_diagnosis_desc', 'patient_id', 'metastatic_first_novel_treatment' and 'metastatic_first_novel_treatment_type'
 - Removing duplicates using drop_duplicates() function in pandas
 - Detect and fix outliers that appear in the following ways:
     - Location based features: patient_zip3, patient_state, Division, Region
@@ -92,7 +92,6 @@ Incorporating feature selection will help us to:
 I'll be using an embedded technique(lasso regression) for feature selection because of its accuracy and speed considering the dimension of my dataset.
 
 LASSO(Least Absolute Shrinkage And Selection Operator) is a form of regularization for linear regression models.
-
 Lasso does feature selection through its L1 penalty term that minimizes the size of all coefficients and allows any coefficient to go to the value of zero, effectively removing input features from the model. The penalty term is added to the residual sum of squares (RSS), which is then multiplied by the regularization parameter (lambda or λ). This regularization parameter controls the amount of regularization applied. 
 
 Larger values of lambda increase the penalty, shrinking more of the coefficients towards zero, which subsequently reduces the importance of (or altogether eliminates) some of the features from the model, which results in automatic feature selection. Conversely, smaller values of lambda reduce the effect of the penalty, retaining more features within the model.
@@ -100,7 +99,6 @@ Larger values of lambda increase the penalty, shrinking more of the coefficients
 We'll use **GridSearchCV** to determine optimal hyperparameters for our lasso regression model.
 
 Choosing appropriate values for the alpha parameter in Lasso regression, especially with a large dataset, requires some strategic steps.
-
 The alpha parameter controls the strength of the regularization: a higher value means more regularization, and a lower value means less
 
 Here's a systematic approach to setting up a grid for alpha:
@@ -127,12 +125,12 @@ Meaning, a smaller percentage of data points are dispersed widely around the mea
 Given the 2 comparisons,we'll be picking random forest as our final model. We still have room for more improvement in our forest model, so we'll perform model validation to possibly increase our r2 score and decrease our MSE.
 
 ### Model Evaluation and Submission
-After seeing how the model works on our train data, we'll use it to predict on the test data and submit results to Kaggle(or save them if you'd like) using 'to_csv' function. Here's is a sample of the predictins made by the model:
+After seeing how the model works on our train data, we'll use it to predict on the test data and submit results to Kaggle(or save them if you'd like) using 'to_csv' function. Below is a sample of the predictins made by the model:
 
 ![Images/Sample Predictions img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/Sample%20Predictions%20img.png)
 
 ![Images/Predictions histogram img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/Predictions%20histogram%20img.png)
-We see a surge of frequency at the around the 50th mark. It seems that it takes under 100 days for most of the diagnoses. It could also indicate some sort of errors made in training.
+We see a surge of frequency around the 50th mark. It seems that it takes under 100 days for most of the diagnoses to be completed. It could also indicate some sort of errors made in training.
 
 
 ### Notes
