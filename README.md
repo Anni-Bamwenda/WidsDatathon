@@ -1,5 +1,5 @@
-# Metastatic Cancer Prediction
-[Women in Data Science Datathon 2024 challenge #02 ](https://www.kaggle.com/competitions/widsdatathon2024-challenge2) 
+# Metastatic Cancer Diagnosis Prediction
+<!---[Women in Data Science Datathon 2024 challenge #02 ](https://www.kaggle.com/competitions/widsdatathon2024-challenge2)--->
 
 ### Background: Equity in Healthcare
 Healthcare inequity is a global challenge. Addressing this challenge has an extensive positive impact on women’s health, which is key for societies and economies to thrive. This datathon is designed to help discover whether disparate treatments exist and to understand the drivers of those biases, such as demographic and societal factors.
