@@ -1,4 +1,4 @@
-# WidsDatathon
+# Metastatic Cancer Prediction
 [Women in Data Science Datathon 2024 challenge #02 ](https://www.kaggle.com/competitions/widsdatathon2024-challenge2) 
 
 ### Background: Equity in Healthcare
@@ -112,29 +112,29 @@ Here are the top 20 features identified through lasso _regularization_:
 ![Images/Top 20 Features by coeff. value img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/Top%2020%20Features%20by%20coeff.%20value%20img.png)
 
 ### Model Training
-We'll be using random forest to train our model so that it can capture non linear relationships. We'll also do another fit using ridge regression since sometimes trees can lead to overfitting.
+We'll use random forests to train our model and capture nonlinear relationships. We'll also run another fit using ridge regression, since trees can sometimes lead to overfitting.
 
 ![Images/Model training scores img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/Model%20training%20scores%20img.png)
 
-From the output above we see that r2 score for random forest is higher than ridge regression.
+From the output above, we see that r2 score for random forest is higher than that of ridge regression.
 Meaning, the forest model has a higher percentage of explaining variance in our independent/outcome variable.
 
-On the other hand, we see that the MSE for forest model is lower than of ridge.
-Meaning, a smaller percentage of data points are dispersed widely around the mean in the random forest model compared to ridge model.
+On the other hand, we see that the MSE for the forest model is lower than that of the ridge.
+Meaning, a smaller percentage of data points are dispersed widely around the mean in the random forest model compared to the ridge model.
 
-Given the 2 comparisons,we'll be picking random forest as our final model. We still have room for more improvement in our forest model, so we'll perform model validation to possibly increase our r2 score and decrease our MSE.
+Given the 2 comparisons,we'll pick random forest as our final model. We still have room for improvement in our forest model, so we'll perform model validation to potentially increase our R2 score and decrease our MSE.
 
 ### Model Evaluation and Submission
-After seeing how the model works on our train data, we'll use it to predict on the test data and submit results to Kaggle(or save them if you'd like) using 'to_csv' function. Below is a sample of the predictins made by the model:
+After seeing how the model performs on our training data, we'll use it to predict on the test data and submit the results to Kaggle (or save them if you'd like) using the 'to_csv' function. Below is a sample of the predictions made by the model:
 
 ![Images/Sample Predictions img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/Sample%20Predictions%20img.png)
 
 ![Images/Predictions histogram img.png](https://github.com/Anni-Bamwenda/WidsDatathon/blob/main/Images/Predictions%20histogram%20img.png)
-We see a surge of frequency around the 50th mark. It seems that it takes under 100 days for most of the diagnoses to be completed. It could also indicate some sort of errors made in training.
+We see a surge of frequency around the 50th mark. It seems that most diagnoses are completed within 100 days. It could also indicate some errors made during training.
 
 
 ### Notes
 Next steps to consider:
-- Fine tuning the model
+- Fine-tuning the model
 - Using multiple ensemble models
 - Creating more visualizations for the 200-250 range for metastatic_diagnosis_period.
