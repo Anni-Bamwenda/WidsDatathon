@@ -1,6 +1,6 @@
 # 🌟 Metastatic Cancer Diagnosis Prediction
 
-Predicting delays in metastatic cancer diagnosis to uncover patterns in healthcare equity.
+Predicting durations for metastatic cancer diagnosis to uncover patterns in healthcare equity.
 
 
 ## 🧭 Overview
@@ -9,7 +9,7 @@ This project was developed for the 2024 WiDS Datathon (Challenge 2) sponsored by
 
 The goal is to predict how long it takes for a patient to receive a metastatic cancer diagnosis, using this duration as a proxy for healthcare access and equity.
 
-Metastatic TNBC is highly aggressive, and early diagnosis is essential. A model that highlights disparities in diagnosis wait time can support targeted intervention and more equitable patient outcomes.
+Metastatic TNBC is highly aggressive, and early diagnosis is essential. A model that highlights disparities in diagnosis wait time can support targeted interventions and more equitable patient outcomes.
 
 ## 🚀 Key Highlights
 
