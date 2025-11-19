@@ -24,10 +24,19 @@ Metastatic TNBC is highly aggressive, and early diagnosis is essential. A model 
 ## 🗂️ Repository Structure
 ```
 Metastatic-Cancer-Prediction/
+├── Data/                    
+│   ├── solution_template.csv
+│   ├── submission.csv
+│   ├── test.csv
+│   └── train.csv
+├── Images/                    
+│   ├── No. of patient race by region img.png
+│   ├── No. of patients by race img.png
+│   ├── No. of patients with 0days diagnosis period img.png
+    ├── Patient Age distribution img.png
+│   └── Types of payment by patient race img.png
 ├── notebooks/              
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_feature_engineering.ipynb
-│   └── 03_model_training.ipynb
+│   ├── anni-widsdatathon02.ipynb
 ├── src/                    
 │   ├── preprocess.py
 │   ├── feature_select.py
