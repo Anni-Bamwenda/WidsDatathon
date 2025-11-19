@@ -170,7 +170,7 @@ Potential improvements for future iterations:
 
 - Developed in Kaggle Notebooks
 
-👩🏽‍💻 Author
+## 👩🏽‍💻 Author
 
 Anni Bamwenda
 Software Engineer II • Data Scientist • AI/ML Engineer
